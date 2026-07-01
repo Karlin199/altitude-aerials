@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Image from "next/image";
 
 export default function Hero() {
@@ -16,52 +17,54 @@ export default function Hero() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      <>
+        <div className="absolute inset-0 bg-black/45" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
+      </>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-6 text-center fade-up">
+      <div className="relative z-10 flex h-full items-center justify-center -translate-y-12 fade-up">
 
-        <div className="max-w-5xl">
+        <div className="mx-auto max-w-6xl text-center">
 
           <p className="mb-6 uppercase tracking-[0.7em] text-yellow-400 text-sm md:text-base">
             Central Alberta
           </p>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.18em] text-white">
-            ALTITUDE AERIALS
+          <h1 className="mt-4 text-6xl font-bold tracking-[0.10em] text-white md:text-7xl xl:text-8xl">
+           ALTITUDE AERIALS
           </h1>
 
-          <p className="mt-8 text-xl md:text-3xl text-white/90">
-            Professional Drone Photography
-            <br />
-            & Cinematic Videography
+          <p className="mx-auto mt-8 max-w-2xl text-2xl leading-snug text-white/90 md:text-3xl">
+           Professional Drone Photography
+          <br />
+           & Cinematic Videography
           </p>
 
-          <p className="mt-8 max-w-3xl mx-auto text-lg text-gray-300 leading-8">
-            Capturing farms, businesses, real estate,
-            construction projects and events from
-            breathtaking perspectives across Central Alberta.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-300">
+           Capturing farms, businesses, real estate, construction projects
+           and events from breathtaking perspectives across Central Alberta.
           </p>
 
           <div className="mt-14 flex flex-col sm:flex-row justify-center gap-6">
 
-            <button className="rounded-full bg-yellow-500 px-10 py-4 text-black font-semibold hover:bg-yellow-400 transition duration-300">
-              Request a Quote
-            </button>
+            <div className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row">
 
-            <button className="rounded-full border border-white px-10 py-4 text-white hover:bg-white hover:text-black transition duration-300">
+              <Button>
+              Request a Quote
+              </Button>
+
+              <Button variant="secondary">
               View Portfolio
-            </button>
+              </Button>
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
-        ↓
       </div>
 
     </section>

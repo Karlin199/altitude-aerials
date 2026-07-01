@@ -32,8 +32,8 @@ export default function Navbar() {
           <Image
             src="/logo/logo.png"
             alt="Altitude Aerials"
-            width={68}
-            height={68}
+            width={90}
+            height={90}
             priority
           />
 
