@@ -3,7 +3,10 @@ import ServiceCard from "./ServiceCard";
 
 export default function Services() {
   return (
-    <section className="bg-black py-32">
+    <section
+     id="services"
+     className="bg-black py-32"
+   >
 
       <SectionTitle
         eyebrow="WHAT WE DO"

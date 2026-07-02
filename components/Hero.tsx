@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen overflow-hidden"
+   >
 
       {/* Background Image */}
       <div className="absolute inset-0 scale-105 animate-[slowZoom_20s_ease-in-out_infinite_alternate]">
