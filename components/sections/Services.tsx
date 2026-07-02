@@ -1,5 +1,5 @@
-import SectionTitle from "./SectionTitle";
-import ServiceCard from "./ServiceCard";
+import SectionTitle from "../ui/SectionTitle";
+import ServiceCard from "../ui/ServiceCard";
 
 export default function Services() {
   return (
