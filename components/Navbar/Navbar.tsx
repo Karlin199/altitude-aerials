@@ -31,7 +31,8 @@ export default function Navbar() {
 
         if (
           scrollPosition >= element.offsetTop &&
-          scrollPosition < element.offsetTop + element.offsetHeight
+          scrollPosition <
+            element.offsetTop + element.offsetHeight
         ) {
           setActiveSection(section);
         }
@@ -39,36 +40,44 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", onScroll);
-
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? "border-b border-white/10 bg-black/80 shadow-2xl backdrop-blur-xl"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-5">
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
-          scrolled ? "h-20" : "h-24"
-        }`}
+        className={`
+          mx-auto
+          flex
+          max-w-7xl
+          items-center
+          justify-between
+          rounded-2xl
+          border
+          transition-all
+          duration-500
+          ${
+            scrolled
+              ? "h-20 border-white/10 bg-black/65 shadow-[0_20px_60px_rgba(0,0,0,.45)] backdrop-blur-2xl"
+              : "h-24 border-transparent bg-black/20 backdrop-blur-md"
+          }
+        `}
       >
         <div
-         className={`transition-transform duration-500 ${
-           scrolled ? "scale-90" : "scale-100"
+          className={`pl-5 transition-all duration-500 ${
+            scrolled ? "scale-95" : "scale-100"
           }`}
         >
-         <Logo />
+          <Logo />
         </div>
 
         <NavLinks activeSection={activeSection} />
 
-        <MobileMenu activeSection={activeSection} />
+        <div className="pr-5">
+          <MobileMenu activeSection={activeSection} />
+        </div>
       </div>
     </header>
   );

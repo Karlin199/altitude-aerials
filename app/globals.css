@@ -1,29 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --brand-gold: #d4af37;
+  --brand-gold-light: #e5c767;
+  --brand-gold-dark: #b99228;
+
+  /* Backgrounds */
+  --background: #050505;
+  --background-secondary: #0c0c0c;
+  --card: #111111;
+
+  /* Text */
+  --foreground: #ffffff;
+  --text-muted: #a1a1aa;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+
+  /* Effects */
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist), sans-serif;
 }
+
+/* ---------- Animations ---------- */
 
 @keyframes slowZoom {
   from {
@@ -33,10 +50,6 @@ body {
   to {
     transform: scale(1.12);
   }
-}
-
-.fade-up {
-  animation: fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp {
@@ -51,6 +64,53 @@ body {
   }
 }
 
-html {
-  scroll-behavior: smooth;
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* ---------- Selection ---------- */
+
+::selection {
+  background: var(--brand-gold);
+  color: black;
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-gold);
+}
+
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(22px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(22px);
+    opacity: 0;
+  }
 }

@@ -20,23 +20,41 @@ export default function Hero() {
         />
       </div>
 
-      {/* Overlay */}
+      {/* Cinematic Overlays */}
+
       <div className="absolute inset-0 bg-black/45" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black" />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
+
+      {/* Soft radial light */}
+
+      <div
+        className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(212,175,55,.18) 0%, rgba(212,175,55,.05) 40%, transparent 75%)",
+        }}
+      />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-28 pb-12 md:pt-20 md:pb-0">
+
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-28 pb-16 md:pt-20 md:pb-0">
 
         <div className="mx-auto w-full max-w-7xl text-center">
 
           <FadeIn delay={0.1}>
-            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-yellow-400 sm:text-sm sm:tracking-[0.5em] md:mb-6 md:text-base md:tracking-[0.7em]">
+            <p
+              className="mb-4 text-xs font-medium uppercase tracking-[0.35em] sm:text-sm sm:tracking-[0.5em] md:mb-6 md:text-base md:tracking-[0.7em]"
+              style={{ color: "var(--brand-gold)" }}
+            >
               Central Alberta
             </p>
           </FadeIn>
 
           <FadeIn delay={0.25}>
-            <h1 className="text-4xl font-bold tracking-[0.08em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="text-4xl font-bold leading-none tracking-[0.08em] text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               ALTITUDE AERIALS
             </h1>
           </FadeIn>
@@ -82,6 +100,25 @@ export default function Hero() {
         </div>
 
       </div>
+
+      {/* Scroll Indicator */}
+
+      <div className="absolute bottom-10 left-1/2 z-20 hidden -translate-x-1/2 md:block">
+
+        <div className="flex h-14 w-8 justify-center rounded-full border border-white/30">
+
+          <div
+            className="mt-2 h-2 w-2 rounded-full"
+            style={{
+              background: "var(--brand-gold)",
+              animation: "scrollDot 2s ease-in-out infinite",
+            }}
+          />
+
+        </div>
+
+      </div>
+
     </section>
   );
 }

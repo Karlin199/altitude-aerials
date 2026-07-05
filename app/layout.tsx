@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+});
 
 export const metadata: Metadata = {
   title: "Altitude Aerials | Drone Photography & Videography",
   description:
     "Professional drone photography and cinematic videography serving Central Alberta. Real estate, agriculture, commercial, construction, and promotional aerial media.",
+
   keywords: [
     "Drone Photography",
     "Drone Videography",
@@ -17,7 +24,12 @@ export const metadata: Metadata = {
     "Red Deer",
     "Alberta",
   ],
-  authors: [{ name: "Altitude Aerials" }],
+
+  authors: [
+    {
+      name: "Altitude Aerials",
+    },
+  ],
 
   openGraph: {
     title: "Altitude Aerials",
@@ -25,6 +37,7 @@ export const metadata: Metadata = {
       "Professional drone photography and videography across Central Alberta.",
     url: "https://altitudeaerials.ca",
     siteName: "Altitude Aerials",
+
     images: [
       {
         url: "/images/hero.jpg",
@@ -32,6 +45,7 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
+
     locale: "en_CA",
     type: "website",
   },
@@ -56,7 +70,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${geist.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }
