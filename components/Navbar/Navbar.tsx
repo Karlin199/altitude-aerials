@@ -58,7 +58,13 @@ export default function Navbar() {
           scrolled ? "h-20" : "h-24"
         }`}
       >
-        <Logo />
+        <div
+         className={`transition-transform duration-500 ${
+           scrolled ? "scale-90" : "scale-100"
+          }`}
+        >
+         <Logo />
+        </div>
 
         <NavLinks activeSection={activeSection} />
 
