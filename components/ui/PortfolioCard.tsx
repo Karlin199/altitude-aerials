@@ -6,15 +6,18 @@ type PortfolioCardProps = {
   title: string;
   category: string;
   image?: string;
+  onClick?: () => void;
 };
 
 export default function PortfolioCard({
   title,
   category,
   image,
+  onClick,
 }: PortfolioCardProps) {
   return (
-    <div
+  <div
+    onClick={onClick}
       className="
         group
         relative
