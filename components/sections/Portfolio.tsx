@@ -3,86 +3,90 @@ import Button from "../ui/Button";
 import Container from "../ui/Container";
 import PortfolioCard from "../ui/PortfolioCard";
 import SectionTitle from "../ui/SectionTitle";
+import { portfolio } from "@/lib/portfolio";
 
 export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="bg-black py-32"
+      className="bg-gradient-to-b from-black via-zinc-950 to-black py-32"
     >
       <Container>
 
         <FadeIn>
           <SectionTitle
             eyebrow="FEATURED WORK"
-            title="Every Flight Tells a Story"
-            description="We're building a collection of stunning aerial photography and cinematic videography from across Central Alberta. Your project could be the next one featured here."
+            title="Showcasing Central Alberta From Above"
+            description="Every flight captures a unique perspective. As our portfolio grows, you'll find aerial photography and cinematic drone footage featuring farms, acreages, commercial properties, construction projects and more."
           />
         </FadeIn>
 
+        {/* Featured Reel */}
         <FadeIn
           direction="up"
           delay={0.15}
           scale
         >
-          <div className="mb-20 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-zinc-900 to-black p-16 text-center">
+          <div className="mb-24 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
 
-            <h3 className="text-4xl font-bold text-white">
-              Your Project Could Be Next
-            </h3>
+            <div className="aspect-video flex items-center justify-center border-b border-white/10 bg-black">
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-              Every business has a story worth telling. Whether it's a farm,
-              acreage, commercial property, construction project or local
-              business, we'd love to help showcase it from above.
-            </p>
+              <div className="text-center">
 
-            <div className="mt-10">
-              <a href="#contact">
-                <Button>
-                  Request a Quote
-                </Button>
-              </a>
+                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-white/5 text-5xl backdrop-blur">
+                  ▶
+                </div>
+
+                <h3 className="mt-8 text-4xl font-bold text-white">
+                  Cinematic Showreel
+                </h3>
+
+                <p className="mt-4 text-zinc-400">
+                  Featured aerial film coming soon.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="p-12 text-center">
+
+              <p className="mx-auto max-w-3xl text-lg leading-8 text-zinc-400">
+                Every project tells a story. Whether it's promoting a local
+                business, documenting a construction project or capturing the
+                beauty of Alberta's landscape, our goal is to create imagery
+                that leaves a lasting impression.
+              </p>
+
+              <div className="mt-10">
+                <a href="#contact">
+                  <Button>
+                    Let's Create Something Amazing
+                  </Button>
+                </a>
+              </div>
+
             </div>
 
           </div>
         </FadeIn>
 
+        {/* Gallery */}
+
         <FadeIn
-          delay={0.3}
+          delay={0.35}
           duration={0.9}
         >
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-            <PortfolioCard
-              title="Coming Soon"
-              category="Real Estate"
-            />
-
-            <PortfolioCard
-              title="Coming Soon"
-              category="Agriculture"
-            />
-
-            <PortfolioCard
-              title="Coming Soon"
-              category="Commercial"
-            />
-
-            <PortfolioCard
-              title="Coming Soon"
-              category="Construction"
-            />
-
-            <PortfolioCard
-              title="Coming Soon"
-              category="Tourism"
-            />
-
-            <PortfolioCard
-              title="Coming Soon"
-              category="Events"
-            />
+            {portfolio.map((item, index) => (
+              <PortfolioCard
+                key={index}
+                title={item.title}
+                category={item.category}
+                image={item.image}
+              />
+            ))}
 
           </div>
         </FadeIn>
