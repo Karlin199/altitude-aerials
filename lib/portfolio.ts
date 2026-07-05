@@ -31,7 +31,7 @@ export const portfolio: PortfolioItem[] = [
     description:
       "Professional aerial photography for residential and commercial real estate.",
 
-    image: "DJI_0041.JPG",
+    image: "/portfolio/DJI_0041.JPG",
 
     featured: true,
 
@@ -101,7 +101,7 @@ export const portfolio: PortfolioItem[] = [
     description:
       "Showcasing Alberta's landscapes and attractions.",
 
-    image: "DJI_0096.JPG",
+    image: "/portfolio/DJI_0096.JPG",
 
     year: 2026,
   },
