@@ -20,9 +20,9 @@ export type PortfolioItem = {
 
 export const portfolio: PortfolioItem[] = [
   {
-    id: "coming-soon-real-estate",
+    id: "town-house-at-night",
 
-    title: "Your Project Could Be Here",
+    title: "Town House at Night",
 
     category: "Real Estate",
 
@@ -31,7 +31,7 @@ export const portfolio: PortfolioItem[] = [
     description:
       "Professional aerial photography for residential and commercial real estate.",
 
-    image: "",
+    image: "DJI_0041.JPG",
 
     featured: true,
 
@@ -90,18 +90,18 @@ export const portfolio: PortfolioItem[] = [
   },
 
   {
-    id: "coming-soon-tourism",
+    id: "Stettler Grain Elevator",
 
-    title: "Tourism",
+    title: "Stettler Grain Elevator",
 
     category: "Tourism",
 
-    location: "Central Alberta",
+    location: "Stettler, Alberta",
 
     description:
       "Showcasing Alberta's landscapes and attractions.",
 
-    image: "",
+    image: "DJI_0096.JPG",
 
     year: 2026,
   },
