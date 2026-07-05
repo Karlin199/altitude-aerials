@@ -34,10 +34,11 @@ export default function PortfolioCard({
         {image ? (
           <>
             <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+             src={image}
+             alt={title}
+             fill
+             unoptimized
+             className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
 
             {/* Overlay */}
