@@ -14,7 +14,24 @@ export default function Button({
 
   return (
     <button
-      className={`rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 ${styles}`}
+      className={`
+        w-full
+        sm:w-auto
+        rounded-full
+        px-8
+        py-4
+        text-base
+        font-semibold
+        transition-all
+        duration-300
+        hover:-translate-y-0.5
+        hover:scale-[1.02]
+        active:scale-95
+        focus:outline-none
+        focus:ring-2
+        focus:ring-yellow-400/40
+        ${styles}
+      `}
     >
       {children}
     </button>

@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-black py-32"
+      className="bg-black py-20 md:py-28 xl:py-32"
     >
       <Container>
 
@@ -19,45 +19,49 @@ export default function Services() {
           />
         </FadeIn>
 
-        <FadeIn
-          direction="left"
-          delay={0.15}
-        >
-          <ServiceCard
-            title="Aerial Photography"
-            description="High-resolution drone photography that highlights your property, business, project, or event with stunning detail."
-            image="/images/services/photo.jpg"
-            imageLeft={true}
-            features={[
-              "Real Estate",
-              "Farms & Acreages",
-              "Commercial Properties",
-              "Construction Progress",
-              "Tourism & Marketing",
-              "Insurance Documentation",
-            ]}
-          />
-        </FadeIn>
+        <div className="mt-14 space-y-20 md:mt-20 md:space-y-28">
 
-        <FadeIn
-          direction="right"
-          delay={0.25}
-        >
-          <ServiceCard
-            title="Cinematic Videography"
-            description="Professional aerial video captured in crisp 4K, perfect for promotional videos, social media, and storytelling."
-            image="/images/services/video.mp4"
-            imageLeft={false}
-            features={[
-              "Business Promotions",
-              "Commercials",
-              "Social Media Content",
-              "Events",
-              "Tourism",
-              "Agriculture",
-            ]}
-          />
-        </FadeIn>
+          <FadeIn
+            direction="left"
+            delay={0.15}
+          >
+            <ServiceCard
+              title="Aerial Photography"
+              description="High-resolution drone photography that highlights your property, business, project, or event with stunning detail."
+              image="/images/services/photo.jpg"
+              imageLeft={true}
+              features={[
+                "Real Estate",
+                "Farms & Acreages",
+                "Commercial Properties",
+                "Construction Progress",
+                "Tourism & Marketing",
+                "Insurance Documentation",
+              ]}
+            />
+          </FadeIn>
+
+          <FadeIn
+            direction="right"
+            delay={0.25}
+          >
+            <ServiceCard
+              title="Cinematic Videography"
+              description="Professional aerial video captured in crisp 4K, perfect for promotional videos, social media, and storytelling."
+              image="/images/services/video.mp4"
+              imageLeft={false}
+              features={[
+                "Business Promotions",
+                "Commercials",
+                "Social Media Content",
+                "Events",
+                "Tourism",
+                "Agriculture",
+              ]}
+            />
+          </FadeIn>
+
+        </div>
 
       </Container>
     </section>

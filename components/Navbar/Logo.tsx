@@ -2,24 +2,31 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <div className="flex items-center gap-4">
+    <a
+      href="#home"
+      className="flex items-center gap-3"
+    >
       <Image
         src="/logo/logo.png"
         alt="Altitude Aerials"
-        width={70}
-        height={70}
+        width={64}
+        height={64}
         priority
+        className="h-14 w-14 transition-all duration-300 md:h-16 md:w-16 lg:h-[70px] lg:w-[70px]"
       />
 
-      <div>
-        <h1 className="text-xl font-bold tracking-[0.35em] text-white">
+      {/* Hide the text on mobile */}
+      <div className="hidden md:block">
+
+        <h1 className="text-lg font-bold tracking-[0.25em] text-white lg:text-xl">
           ALTITUDE AERIALS
         </h1>
 
-        <p className="text-xs uppercase tracking-[0.35em] text-yellow-400">
+        <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-yellow-400 lg:text-xs">
           Drone Photography & Videography
         </p>
+
       </div>
-    </div>
+    </a>
   );
 }
