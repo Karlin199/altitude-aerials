@@ -101,7 +101,7 @@ export const portfolio: PortfolioItem[] = [
     description:
       "Showcasing Alberta's landscapes and attractions.",
 
-    image: "/portfolio/DJI_0096.JPG",
+    image: "/portfolio/DJI_0145.JPG",
 
     year: 2026,
   },
