@@ -20,9 +20,9 @@ export type PortfolioItem = {
 
 export const portfolio: PortfolioItem[] = [
   {
-    id: "town-house-at-night",
+    id: "town-house",
 
-    title: "Town House at Night",
+    title: "Town House",
 
     category: "Real Estate",
 
