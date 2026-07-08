@@ -42,25 +42,18 @@ export default function Portfolio() {
           >
             <div className="mb-24 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
 
-              <div className="aspect-video flex items-center justify-center border-b border-white/10 bg-black">
-
-                <div className="text-center">
-
-                  <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-white/5 text-5xl backdrop-blur">
-                    ▶
-                  </div>
-
-                  <h3 className="mt-8 text-4xl font-bold text-white">
-                    Cinematic Showreel
-                  </h3>
-
-                  <p className="mt-4 text-zinc-400">
-                    Featured aerial film coming soon.
-                  </p>
-
-                </div>
-
+              <div className="aspect-video overflow-hidden bg-black">
+                <video
+                  className="h-full w-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/videos/showreel.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              
 
               <div className="p-12 text-center">
 
